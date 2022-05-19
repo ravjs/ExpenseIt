@@ -28,7 +28,8 @@ namespace ExpenseIt
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //View Expense Report
-            ExpenseReportPage expenseReportPage = new ExpenseReportPage();
+            //We call the new constructor passing the expense report data of the selected person
+            ExpenseReportPage expenseReportPage = new ExpenseReportPage(this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
 
         }
